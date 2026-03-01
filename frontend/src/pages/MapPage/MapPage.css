@@ -12,27 +12,29 @@
 }
 
 .map-header h1 {
-    font-size: 1.75rem;
+    font-size: 2.2rem;
     font-weight: var(--font-weight-bold);
-    letter-spacing: -0.5px;
+    letter-spacing: -1px;
     margin-bottom: 4px;
 }
 
 .map-header p {
-    color: var(--color-text-tertiary);
-    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-base);
 }
 
 .map-commodity-select {
     padding: 10px 16px;
     border-radius: var(--radius-md);
-    background: var(--color-bg-secondary);
-    backdrop-filter: blur(8px);
+    background: var(--color-surface-glass);
+    backdrop-filter: blur(12px);
     border: 1px solid var(--color-border);
     color: var(--color-text-primary);
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-medium);
     min-width: 180px;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
 }
 
 .map-layout {
@@ -50,23 +52,14 @@
 
 /* SVG container */
 .map-svg-container {
-    background: var(--color-bg-secondary);
-    backdrop-filter: blur(12px);
+    background: var(--color-surface-glass);
+    backdrop-filter: blur(16px);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-xl);
     padding: 20px;
     position: relative;
     overflow: visible;
-}
-
-.map-svg-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.04), transparent);
+    box-shadow: var(--shadow-sm);
 }
 
 /* Tooltip */
@@ -78,8 +71,8 @@
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     padding: 10px 14px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(12px);
+    box-shadow: var(--shadow-lg);
+    backdrop-filter: blur(16px);
     min-width: 160px;
 }
 
@@ -102,23 +95,14 @@
 
 /* Details panel */
 .map-details-panel {
-    background: var(--color-bg-secondary);
-    backdrop-filter: blur(12px);
+    background: var(--color-surface-glass);
+    backdrop-filter: blur(16px);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-xl);
     padding: 24px;
     position: relative;
     overflow: hidden;
-}
-
-.map-details-panel::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.04), transparent);
+    box-shadow: var(--shadow-sm);
 }
 
 .map-details-panel h3 {

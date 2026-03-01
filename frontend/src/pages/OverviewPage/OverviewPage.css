@@ -105,23 +105,14 @@
 
 /* Heatmap */
 .heatmap-section {
-    background: var(--color-bg-secondary);
-    backdrop-filter: blur(12px);
+    background: var(--color-surface-glass);
+    backdrop-filter: blur(16px);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-xl);
     padding: 28px;
     position: relative;
     overflow: hidden;
-}
-
-.heatmap-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--color-border), transparent);
+    box-shadow: var(--shadow-sm);
 }
 
 .heatmap-header {
@@ -262,23 +253,14 @@
 }
 
 .recent-alerts-section {
-    background: var(--color-bg-secondary);
-    backdrop-filter: blur(12px);
+    background: var(--color-surface-glass);
+    backdrop-filter: blur(16px);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-xl);
     padding: 24px;
     position: relative;
     overflow: hidden;
-}
-
-.recent-alerts-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--color-border), transparent);
+    box-shadow: var(--shadow-sm);
 }
 
 .recent-alerts-header {

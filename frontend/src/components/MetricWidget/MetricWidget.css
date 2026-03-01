@@ -98,15 +98,17 @@
     font-size: 12px;
     color: var(--color-text-secondary);
     margin-top: 4px;
+    position: relative;
+    z-index: 2;
 }
 
 .metric-widget-chart {
     position: absolute;
-    bottom: 10px;
-    right: 0;
-    width: 65%;
-    height: 50px;
-    opacity: 0.9;
-    z-index: 0;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 35px;
+    opacity: 0.8;
+    z-index: 1;
     pointer-events: none;
 }

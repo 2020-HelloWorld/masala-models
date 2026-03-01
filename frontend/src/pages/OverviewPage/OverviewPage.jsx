@@ -50,7 +50,6 @@ export default function OverviewPage() {
                     label="CRITICAL ALERTS"
                     value={stats.critical}
                     color="var(--color-risk-critical)"
-                    glow={stats.critical > 0}
                     icon={<AlertTriangle size={18} />}
                     footer="Critical alert trend"
                     trendTag="↑ 12% vs last week"
@@ -60,7 +59,6 @@ export default function OverviewPage() {
                     label="HIGH-RISK PAIRS"
                     value={stats.high}
                     color="var(--color-risk-high)"
-                    glow={stats.high > 0}
                     icon={<Activity size={18} />}
                     footer="High-risk commodity-region pairs"
                     trendTag="↑ 5%"
@@ -71,7 +69,6 @@ export default function OverviewPage() {
                     value="4.2"
                     unit="days"
                     color="var(--color-signal-market)"
-                    glow={true}
                     icon={<Clock size={18} />}
                     footer="Average risk mitigation period"
                     chartData={[4.0, 4.0, 4.1, 4.0, 4.1, 4.2, 4.1, 4.2].map((v, i) => ({ value: v, name: i }))}
@@ -81,7 +78,6 @@ export default function OverviewPage() {
                     value={5}
                     unit="actions"
                     color="var(--color-risk-low)"
-                    glow={true}
                     icon={<Shield size={18} />}
                     footer="preventive actions taken"
                     trendTag="↑ 15%"

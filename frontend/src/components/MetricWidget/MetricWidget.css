@@ -1,0 +1,112 @@
+.metric-widget {
+    background: var(--color-surface-glass);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+    min-height: 150px;
+    z-index: 1;
+}
+
+.metric-widget::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at right top, color-mix(in srgb, var(--widget-color) 12%, transparent), transparent 70%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.metric-widget:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.metric-widget.glow {
+    box-shadow: 0 8px 32px color-mix(in srgb, var(--widget-color) 20%, transparent), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    border-color: color-mix(in srgb, var(--widget-color) 40%, transparent);
+}
+
+.metric-widget-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 2;
+}
+
+.metric-widget-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.metric-widget-tag {
+    font-size: 11px;
+    font-weight: var(--font-weight-bold);
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+.metric-widget-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+}
+
+.metric-widget-label {
+    font-size: 11px;
+    font-weight: var(--font-weight-extrabold);
+    color: var(--color-text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 2px;
+}
+
+.metric-widget-value {
+    font-size: 2.5rem;
+    font-weight: var(--font-weight-bold);
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.metric-widget-unit {
+    font-size: 0.4em;
+    margin-left: 4px;
+    font-weight: 500;
+    color: var(--color-text-tertiary);
+}
+
+.metric-widget-footer {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    margin-top: 4px;
+}
+
+.metric-widget-chart {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    width: 65%;
+    height: 50px;
+    opacity: 0.9;
+    z-index: 0;
+    pointer-events: none;
+}

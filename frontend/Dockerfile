@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install project dependencies
-RUN npm install
+RUN npm install --legacy-peer-deps
 
 # Copy the rest of the application code
 COPY . .
@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 5173
 
 # Start the Vite development server, binding to all interfaces to allow external access
-CMD ["npm", "run", "dev", "--", "--host"]
+CMD ["npm", "run", "dev"]

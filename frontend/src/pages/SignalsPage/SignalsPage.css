@@ -1,0 +1,131 @@
+.signals-page {
+    max-width: 1300px;
+}
+
+.signals-header {
+    margin-bottom: 28px;
+}
+
+.signals-header h1 {
+    font-size: 1.75rem;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+}
+
+.signals-header p {
+    color: var(--color-text-tertiary);
+    font-size: var(--font-size-sm);
+}
+
+.signals-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+}
+
+.signals-controls select {
+    padding: 10px 16px;
+    border-radius: var(--radius-md);
+    background: var(--color-bg-secondary);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-primary);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    min-width: 160px;
+}
+
+.signals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 20px;
+}
+
+.signal-chart-card {
+    background: var(--color-bg-secondary);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: all var(--transition-base);
+}
+
+.signal-chart-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-border), transparent);
+}
+
+.signal-chart-card:hover {
+    border-color: var(--color-border-hover);
+    box-shadow: var(--shadow-lg);
+}
+
+.signal-chart-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.signal-chart-header h3 {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: -0.2px;
+}
+
+.signal-type-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 8px currentColor;
+}
+
+.signal-chart-labels {
+    display: flex;
+    gap: 16px;
+    font-size: 11px;
+    color: var(--color-text-tertiary);
+}
+
+.signal-chart-labels span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.signal-chart-labels .line-sample {
+    width: 14px;
+    height: 2px;
+    border-radius: 1px;
+    display: inline-block;
+}
+
+.signal-chart-labels .line-sample.dashed {
+    border-top: 2px dashed var(--color-text-tertiary);
+    height: 0;
+    width: 14px;
+}
+
+.signal-chart-wrap {
+    height: 240px;
+}
+
+@media (max-width: 900px) {
+    .signals-grid {
+        grid-template-columns: 1fr;
+    }
+}

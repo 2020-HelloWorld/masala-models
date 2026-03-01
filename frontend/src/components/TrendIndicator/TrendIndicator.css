@@ -1,0 +1,19 @@
+.trend-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+}
+
+.trend-indicator.rising {
+    color: var(--color-risk-critical);
+}
+
+.trend-indicator.falling {
+    color: var(--color-risk-low);
+}
+
+.trend-indicator.stable {
+    color: var(--color-text-tertiary);
+}

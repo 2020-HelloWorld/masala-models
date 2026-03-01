@@ -102,18 +102,20 @@ export default function DetailPage() {
             </div>
 
             <div className="detail-hero">
-                <div className="detail-hero-info">
-                    <h1>
-                        <span className="commodity-name">{decodedCommodity}</span>
-                        <span className="region-name">— {regionInfo?.name || region}</span>
-                    </h1>
-                    <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
-                        <RiskBadge level={entry.riskLevel} />
-                        <TrendIndicator trend={entry.trend} />
+                <div className="detail-hero-main">
+                    <div className="detail-hero-titles">
+                        <h1>
+                            <span className="commodity-name">{decodedCommodity}</span>
+                            <span className="region-name">— {regionInfo?.name || region}</span>
+                        </h1>
+                        <div className="detail-hero-tags">
+                            <RiskBadge level={entry.riskLevel} />
+                            <TrendIndicator trend={entry.trend} />
+                        </div>
                     </div>
                 </div>
                 <div className="score-ring-container">
-                    <ScoreRing score={entry.combinedScore} />
+                    <ScoreRing score={entry.combinedScore} size={90} />
                 </div>
             </div>
 

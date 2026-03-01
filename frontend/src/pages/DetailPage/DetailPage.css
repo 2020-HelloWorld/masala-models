@@ -5,7 +5,8 @@
 .detail-breadcrumb {
     font-size: 12px;
     color: var(--color-text-tertiary);
-    margin-bottom: 16px;
+    margin-bottom: 8px;
+    /* Reduced from 16px */
     display: flex;
     align-items: center;
     gap: 6px;
@@ -21,48 +22,68 @@
 
 .detail-hero {
     display: flex;
-    align-items: flex-start;
-    gap: 32px;
-    margin-bottom: 28px;
-    flex-wrap: wrap;
+    align-items: center;
+    /* Center vertically */
+    justify-content: space-between;
+    /* Push score-ring to right */
+    gap: 24px;
+    margin-bottom: 24px;
+    background: var(--color-surface-glass);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: 20px 24px;
+    box-shadow: var(--shadow-sm);
 }
 
-.detail-hero-info {
+.detail-hero-main {
     flex: 1;
     min-width: 0;
 }
 
-.detail-hero-info h1 {
-    font-size: 2.2rem;
-    font-weight: var(--font-weight-bold);
-    letter-spacing: -1px;
-    margin-bottom: 8px;
+.detail-hero-titles {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
     flex-wrap: wrap;
 }
 
-.detail-hero-info h1 .commodity-name {
+.detail-hero-titles h1 {
+    font-size: 1.8rem;
+    /* Slightly smaller to fit inline */
+    font-weight: var(--font-weight-bold);
+    letter-spacing: -0.5px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.detail-hero-titles h1 .commodity-name {
     color: var(--color-text-primary);
 }
 
-.detail-hero-info h1 .region-name {
+.detail-hero-titles h1 .region-name {
     color: var(--color-text-tertiary);
     font-weight: 400;
 }
 
+.detail-hero-tags {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
 /* Score ring */
 .score-ring-container {
-    text-align: center;
-    padding: 8px;
+    flex-shrink: 0;
 }
 
 .score-ring {
     position: relative;
-    width: 130px;
-    height: 130px;
-    margin: 0 auto 8px;
+    /* width/height managed via style prop in JSX */
+    margin: 0;
 }
 
 .score-ring svg {
@@ -79,14 +100,15 @@
 }
 
 .score-ring-value .score-num {
-    font-size: 2.2rem;
+    font-size: 1.6rem;
+    /* Adjusted down for 90px ring */
     font-weight: var(--font-weight-bold);
     line-height: 1;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
 }
 
 .score-ring-value .score-label {
-    font-size: 10px;
+    font-size: 9px;
     color: var(--color-text-tertiary);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -98,7 +120,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
+    /* Reduced from 24px */
 }
 
 /* Section card */
@@ -107,7 +130,8 @@
     backdrop-filter: blur(16px);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-xl);
-    padding: 28px;
+    padding: 24px;
+    /* Reduced from 28px */
     margin-bottom: 20px;
     position: relative;
     overflow: hidden;
@@ -134,9 +158,12 @@
 .explain-summary {
     font-size: var(--font-size-base);
     color: var(--color-text-secondary);
-    line-height: 1.8;
-    margin-bottom: 24px;
-    padding: 16px 20px;
+    line-height: 1.6;
+    /* Tighter line height */
+    margin-bottom: 20px;
+    /* Reduced from 24px */
+    padding: 14px 18px;
+    /* Reduced padding */
     background: var(--color-accent-bg);
     border-radius: var(--radius-md);
     border-left: 3px solid var(--color-accent);
@@ -145,8 +172,10 @@
 .factor-list {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-bottom: 24px;
+    gap: 8px;
+    /* Reduced from 10px */
+    margin-bottom: 20px;
+    /* Reduced from 24px */
 }
 
 .factor-item {
